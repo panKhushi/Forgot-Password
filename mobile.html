@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reset your Password - Focus</title>
+    <link rel="stylesheet" href="forgot_pass.css">
+</head>
+<body>
+    <!-- Background decorative shapes -->
+    <div class="bg-shape bg-shape-1"></div>
+    <div class="bg-shape bg-shape-2"></div>
+    <div class="bg-shape bg-shape-3"></div>
+    <div class="bg-shape bg-shape-4"></div>
+    <div class="bg-shape bg-shape-5"></div>
+    <div class="bg-shape bg-shape-6"></div>
+
+    <div class="container">
+        <div class="main-content">
+            <!-- Left side - Logo and Illustration -->
+            <div class="left-section">
+                <div class="logo">
+                    <div class="logo-icon"></div>
+                    <div class="logo-text">FOCUS</div>
+                </div>
+
+                <div class="illustration">
+                    <!-- Floating elements -->
+                    <div class="floating-element floating-1"></div>
+                    <div class="floating-element floating-2"></div>
+                    <div class="floating-element floating-3"></div>
+                    <div class="floating-element floating-4"></div>
+
+                    <!-- Main lock illustration -->
+                    <div class="lock-container">
+                        <div class="lock-body">
+                            <div class="lock-shackle"></div>
+                            <div class="lock-keyhole"></div>
+                        </div>
+                    </div>
+
+                    <!-- Email envelope -->
+                    <div class="envelope"></div>
+
+                    <!-- Credit card -->
+                    <div class="credit-card"></div>
+                </div>
+            </div>
+
+            <!-- Right side - Form -->
+            <div class="form-section">
+                <div id="resetForm">
+                    <h1 class="form-title">Reset your Password</h1>
+                    <p class="form-subtitle">
+                        The verification email will be sent to the mailbox.<br>
+                        Please check it.
+                    </p>
+
+                    <form onsubmit="handleSubmit(event)">
+                        <div class="form-group">
+                            <label class="form-label" for="email">Email</label>
+                            <input 
+                                type="email" 
+                                id="email" 
+                                class="form-input" 
+                                placeholder="focus001@gmail.com"
+                                value="focus001@gmail.com"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="verification">Verification code</label>
+                            <input 
+                                type="text" 
+                                id="verification" 
+                                class="form-input" 
+                                placeholder="0757"
+                                value="0757"
+                                required
+                            >
+                        </div>
+
+                        <button type="submit" class="send-button">Send</button>
+                    </form>
+
+                    <a href="login2.html" class="back-link" onclick="handleBackToLogin()">Back to Login</a>
+                </div>
+
+                <div class="success-message" id="successMessage">
+                    <div class="success-icon"></div>
+                    <h2 class="success-title">Password Reset Sent!</h2>
+                    <p class="success-text">
+                        We've sent a password reset link to your email address.<br>
+                        Please check your inbox and follow the instructions.
+                    </p>
+                    <a href="#" class="back-link" onclick="handleBackToLogin()" style="margin-top: 24px; display: inline-block;">Back to Login</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="forgot_pass.js"></script>
+</body>
+</html>
